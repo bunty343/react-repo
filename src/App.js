@@ -1,25 +1,28 @@
+import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import LinkContainer from "./components/LinkContainer"
 
 function App() {
+  const [hideLink, setHideLink] = useState(false)
+  const hideLinkHandler = () => {
+    setHideLink(!hideLink)
+  }
+  console.log(useState(false))
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+        Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       { hideLink ?  null :  <LinkContainer />  }
+        <br />
+        <button onClick={hideLinkHandler}>{hideLink ? "Hide Links" : "Show links"}</button>
       </header>
     </div>
   );
 }
 
 export default App;
+
