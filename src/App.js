@@ -16,7 +16,7 @@ function App() {
         <p>
         Edit <code>src/App.js</code> and save to reload.
         </p>
-       { hideLink ?  null :  <LinkContainer />  }
+       { hideLink ?   <LinkContainer /> : null }
         <br />
         <button onClick={hideLinkHandler}>{hideLink ? "Hide Links" : "Show links"}</button>
       </header>
@@ -25,4 +25,3 @@ function App() {
 }
 
 export default App;
-

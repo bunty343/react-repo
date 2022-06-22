@@ -1,0 +1,46 @@
+import Link from "./Link"
+
+const LinkContainer = () => {
+   
+    const links = [
+        {
+            id: 1,
+            href: "https://reactjs.org",
+            content: "Learn React"
+        },
+        {
+            id: 2,
+            href: "https://youtube.com",
+            content: "Go To Youtube"
+        },
+        {
+            id: 3,
+            href: "https://google.com",
+            content: "Go To Google"
+        },
+        {
+            id: 4,
+            href: "https://apple.com",
+            content: "Go To apple"
+        },
+        {
+            id: 5,
+            href: "https://amazon.com",
+            content: "Go To amazon"
+        }
+   ] 
+    return (
+        <div>
+        {links.map((link) => {
+            return (
+                <div key={link.id}>
+                    <Link href={link.href}>{link.content}</Link>
+                    <br />
+                </div>    
+            )
+        })}
+    </div>
+    )
+}
+
+export default LinkContainer
