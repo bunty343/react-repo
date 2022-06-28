@@ -1,4 +1,6 @@
 
+
+
 function UserCard({user: {name, username, email, phone, website }}) {
     
     return (
